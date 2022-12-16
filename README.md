@@ -1,6 +1,20 @@
 # Notes
 
-- `iex -S mix`
+- `mix run -e FraudChecker.check`
+
+Some other edge cases not accounted for in input data:
+- Multiple users for a customer company
+- Maiden name differences if user has gotten married recently
+- No names on link, email AND phone match
+- Names don't match, email AND phone match
+- No email or phone on link, name matches
+- Trade name matches but legal name doesn't (and vice versa)
+
+Other ways to prevent fraud:
+- Require all links to have email and phone number
+- Store bank name(s) in customer model
+  - Maybe including routing/account number?
+- Disallow nicknames? (or require user provides list of nicknames they actually go by)
 
 # Prompt
 
